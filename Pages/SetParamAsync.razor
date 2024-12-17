@@ -1,0 +1,29 @@
+@page "/SetParametersAsync"
+
+
+<h1>1.</h1>
+<h2>Component lifecycle</h2>
+
+<h1>SetParametersAsync</h1>
+
+<h1>@ertek</h1>
+
+
+@code {
+    private string ertek="Semmi";
+
+    public  override async Task SetParametersAsync(ParameterView parameters)
+    {
+        // Alap paraméterek beállítása
+        await base.SetParametersAsync(parameters);
+
+        // 5 másodperces várakozás
+        await Task.Delay(5000);
+
+        // Érték beállítása
+        ertek = "Frissített érték 5 másodperc után";
+
+        // Állapot frissítése (ha szükséges)
+        StateHasChanged();
+    }
+}
