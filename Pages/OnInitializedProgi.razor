@@ -1,0 +1,18 @@
+@page "/OnInitialized"
+
+<h1>2.</h1>
+<h2>Component lifecycle</h2>
+
+<h1>OnInitialized</h1>
+
+<h3>Érték: @ertek</h3>
+
+@code {
+    public string ertek="Semmi";
+
+    protected override void OnInitialized()
+    {
+        // A változónak értéket adunk
+        ertek = "Szia, Blazor világ!";
+    }
+}
