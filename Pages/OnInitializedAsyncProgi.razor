@@ -1,0 +1,27 @@
+@page "/OnInitializedAsync"
+
+
+<h1>1.</h1>
+<h2>Component lifecycle</h2>
+
+<h1>OnInitializedAsync</h1>
+
+<h1>@ertek</h1>
+
+
+@code {
+    public string ertek = "Semmi";
+
+    protected override async Task OnInitializedAsync()
+    {
+
+        // 5 másodperces várakozás
+        await Task.Delay(5000);
+
+        // Érték beállítása
+        ertek = "Frissített érték 5 másodperc után";
+
+        // Állapot frissítése (ha szükséges)
+        StateHasChanged();
+    }
+}
