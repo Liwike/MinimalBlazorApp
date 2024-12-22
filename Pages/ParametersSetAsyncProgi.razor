@@ -1,18 +1,18 @@
-@page "/OnInitializedAsync"
+@page "/ParametersSetAsync"
 
 
-<h1>3.</h1>
+<h1>5.</h1>
 <h2>Component lifecycle</h2>
 
-<h1>OnInitializedAsync</h1>
+<h1>OnParametersSetAsync</h1>
 
 <h1>@ertek</h1>
 
 
 @code {
-    public string ertek = "Semmi";
+    public string ertek="Semmi";
 
-    protected override async Task OnInitializedAsync()
+    protected override async Task OnParametersSetAsync()
     {
 
         // 5 másodperces várakozás
