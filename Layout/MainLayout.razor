@@ -1,14 +1,47 @@
 ﻿@inherits LayoutComponentBase
 
 <div class="main-layout">
-    <nav>
-        <a href="/">Home</a> |
-        <a href="/hello">Hello</a>
-        <a href="/SetParametersAsync">SetParametersAsync</a>
-        <a href="/OnInitialized">OnInitialized</a>
-        <a href="/OnInitializedAsync">OnInitializedAsync</a>
+    <nav class="vertical-nav">
+        <NavLink href="/">Home</NavLink>
+        <NavLink href="/hello">Hello</NavLink>
+        <NavLink href="/SetParametersAsync">1. SetParametersAsync</NavLink>
+        <NavLink href="/OnInitialized">2. OnInitialized</NavLink>
+        <NavLink href="/OnInitializedAsync">3. OnInitializedAsync</NavLink>
+        <NavLink href="/OnParametersSet">4. ParametersSet</NavLink>
     </nav>
     <hr />
     @Body
     <hr />
 </div>
+
+<style>
+    .vertical-nav {
+        width: 200px; /* A menü szélessége */
+        background-color: #f8f9fa; /* Világos szürke háttér */
+        padding: 10px;
+        border: 1px solid #ddd;
+    }
+
+        .vertical-nav ul {
+            list-style-type: none; /* Távolítsd el a felsorolás jeleit */
+            padding: 0;
+            margin: 0;
+        }
+
+        .vertical-nav li {
+            margin: 5px 0; /* Távolság az elemek között */
+        }
+
+        .vertical-nav a {
+            text-decoration: none; /* Távolítsd el az aláhúzást */
+            color: #007bff; /* Kék szöveg */
+            padding: 8px 12px;
+            display: block; /* A kattintható terület legyen blokk */
+            border-radius: 4px;
+        }
+
+            .vertical-nav a:hover {
+                background-color: #007bff; /* Kék háttér a hover alatt */
+                color: white; /* Fehér szöveg a hover alatt */
+            }
+</style>

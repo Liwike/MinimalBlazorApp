@@ -1,0 +1,22 @@
+@page "/OnParametersSet"
+
+
+<h1>4.</h1>
+<h2>Component lifecycle</h2>
+
+<h1>ParametersSet</h1>
+
+<h1>@ertek</h1>
+
+
+@code {
+    public string ertek="Semmi";
+
+    protected override void OnParametersSet()
+    {
+        ertek = "OnParametersSet érték.";
+
+        // Állapot frissítése (ha szükséges)
+        StateHasChanged();
+    }
+}
