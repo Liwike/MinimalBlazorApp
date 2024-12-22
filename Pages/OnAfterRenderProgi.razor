@@ -1,0 +1,21 @@
+@page "/OnAfterRender"
+
+<h1>6.</h1>
+<h2>Component lifecycle</h2>
+
+<h1>OnAfterRender</h1>
+
+<h3>Érték: @ertek</h3>
+
+@code {
+    public string ertek="Semmi";
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        // A változónak értéket adunk
+        if (firstRender)
+            ertek = $"Szia, Blazor világ! firstRender={firstRender}";
+        else
+            ertek = $"Szia, Blazor világ! firstRender={firstRender}";
+    }
+}
